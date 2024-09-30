@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: ebt-api-java
+
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: root
+      password: example
+      database: ebt-bank
+      authentication-database: admin
